@@ -1,33 +1,19 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="es">
-
 <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" th:href="@{/css/login-admin.css}" />
+    <meta charset="UTF-8">
     <title>Login Administrador</title>
-
+    <link rel="stylesheet" th:href="@{/css/login-admin.css}">
 </head>
-
 <body>
     <h2>--ADMINISTRADOR--</h2>
-
     <form th:action="@{/admin/login}" method="post">
-        <label for="username">Usuario:</label>
-        <input type="text" id="username" name="username" required />
-        <br />
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" required />
-        <br />
+        <label>Usuario: <input type="text" name="username" required></label><br>
+        <label>Contraseña: <input type="password" name="password" required></label><br>
         <button type="submit">Ingresar</button>
         <a th:href="@{/inicio}" class="button-link">Página Principal</a>
     </form>
-
-    <div class="message error-message" th:if="${param.error}">
-        <p style="color:red;">Usuario o contraseña incorrectos.</p>
-    </div>
-    <div class="message success-message" th:if="${param.logout}">
-        <p style="color:green;">Has cerrado sesión correctamente.</p>
-    </div>
+    <div th:if="${param.error}" style="color:red;">Usuario o contraseña incorrectos.</div>
+    <div th:if="${param.logout}" style="color:green;">Has cerrado sesión correctamente.</div>
 </body>
-
 </html>

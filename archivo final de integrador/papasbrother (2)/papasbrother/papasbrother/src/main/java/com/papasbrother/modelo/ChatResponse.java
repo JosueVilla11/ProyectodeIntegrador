@@ -19,5 +19,10 @@ public class ChatResponse {
         this.responseType = responseType;
         this.needsFollowUp = responseType.equalsIgnoreCase("menu") || responseType.equalsIgnoreCase("options");
     }
+
+    public Object getContext() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getContext'");
+    }
 }
 

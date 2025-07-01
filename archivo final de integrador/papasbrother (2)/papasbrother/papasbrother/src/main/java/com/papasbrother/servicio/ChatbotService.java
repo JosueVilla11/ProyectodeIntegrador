@@ -143,4 +143,14 @@ public class ChatbotService {
         return "🤔 No estoy seguro de lo que preguntas. " +
                defaultOptions.get((int) (Math.random() * defaultOptions.size()));
     }
+
+    public Object getLastContext() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getLastContext'");
+    }
+
+    public List<ChatResponse> getResponseConfigurations() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getResponseConfigurations'");
+    }
 }
