@@ -17,6 +17,10 @@ public class Role {
     @Column(unique = true, nullable = false)
     private String name;
 
+    // Constructores
+    public Role() {}
+    public Role(String name) { this.name = name; }
+
     // Getters y setters
 
     public Long getId() {
